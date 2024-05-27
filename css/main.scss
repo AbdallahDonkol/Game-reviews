@@ -1,0 +1,133 @@
+@import 'fonts';
+$main-color: #272b30;
+$sec-color: #32383e;
+$navbar-bg: #3a497b;
+$navLinks-color: #09c;
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media (min-width:768px) {
+        width: 750px;
+    }
+    @media (min-width:992px) {
+        width: 970px;
+    }
+    @media (min-width:1200px) {
+        width: 1170px;
+    }
+}
+body{
+    font-family: 'Comfortaa',cursive;
+    background-color: $main-color;
+    a{
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Nerko One',cursive;
+    font-weight: 500;
+    margin: 0;
+}
+.bg-main{
+    background-color: $main-color !important;
+}
+.small{
+    font-size: .875em !important;
+}
+.badge-color{
+    background-color: $sec-color !important;
+}
+.games{
+    header {
+        background-image: url(../assets/images/wraper.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 30vh;
+    }
+    .navbar{
+        background-color: $navbar-bg;
+        margin-top: -38.5008px;
+        border-radius: 20px;
+        margin-inline: auto;
+        box-shadow: 0px 0px 8px 1px #000;
+        padding-block: 15px !important;
+        @media (max-width:1024px) {
+            width: 80%;
+        }
+        @media (min-width:1025px) {
+            width: 75%;
+        }
+        .nav-item .nav-link{
+            font-weight: bold;
+        }
+        .nav-item .nav-link.active ,.nav-item .nav-link:hover{
+            color: $navLinks-color !important;
+            transition: color 0.5s;
+        }
+        .logo-title a{
+            transition: color 0.5s;
+            &:hover{
+                color: $navLinks-color !important;
+            }
+        }
+        .navbar-toggler{
+            color: transparent;
+            background-color: unset;
+            border: unset;
+        }
+        .navbar-collapse{
+            .nav-item{
+                padding-block: 5px;
+            }
+        }
+    }
+    .card{
+        filter: grayscale(0.7);
+        cursor: pointer;
+        transition: transform 0.6s, filter 0.5s ;
+        &:hover{
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+    }
+}
+
+.loader {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
